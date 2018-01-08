@@ -89,6 +89,8 @@ noremap <leader>c "+y
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+nnoremap <leader>n :tabnew<cr>:NERDTreeToggle<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "CPP 빌드관련
 
