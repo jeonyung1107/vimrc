@@ -14,11 +14,14 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim' "파일 검색 플러그인
 Plugin 'valloric/youcompleteme' "자동완성 플러그인
 Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 let g:airline#extensions#tabline#enabled = 1
+let g:ycm_confirm_extra_conf=0
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nu " 줄번호
@@ -35,7 +38,7 @@ set autowrite " 다른 파일로 넘어갈 때 자동 저장
 set autoread " 작업 중인 파일 외부에서 변경됬을 경우 자동으로 불러옴
 
 set history=512
-set paste " 붙여넣기 계단현상 없애기
+"set paste " 붙여넣기 계단현상 없애기
 
 "검색
 set smartcase " 검색시 대소문자 구별
@@ -67,7 +70,6 @@ set fileencodings=utf8,euc-kr
 
 "색상
 color molokai
-let g:molokai_original = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "key mapping
@@ -89,8 +91,14 @@ noremap <leader>c "+y
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+"새탭
 nnoremap <leader>n :tabnew<cr>:NERDTreeToggle<cr>
+
+"종료
 nnoremap <leader>. :wq<cr>
+nnoremap <leader>q :q<cr>
+
+nnoremap <leader>o o<esc>k
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "CPP 빌드관련
