@@ -19,6 +19,7 @@ Plugin 'altercation/vim-colors-solarized'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:ycm_confirm_extra_conf=0
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
