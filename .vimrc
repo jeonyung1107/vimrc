@@ -101,6 +101,9 @@ nnoremap <leader>q :q<cr>
 
 nnoremap <leader>o o<esc>k
 
+"ctrl-a로 전체 선택
+nnoremap <C-a> <esc>ggVG<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "CPP 빌드관련
 
