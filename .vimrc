@@ -15,6 +15,8 @@ Plugin 'ctrlpvim/ctrlp.vim' "파일 검색 플러그인
 Plugin 'valloric/youcompleteme' "자동완성 플러그인
 Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/Conque-GDB'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -93,7 +95,10 @@ nnoremap <leader>ev :tabe $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "새탭
-nnoremap <leader>n :tabnew<cr>:NERDTreeToggle<cr>
+nnoremap <leader>nn :tabnew<cr>:NERDTreeToggle<cr>
+
+"NERDTreeToggle
+nnoremap <leader>nt :<ESC>:NERDTreeToggle<CR>
 
 "종료
 nnoremap <leader>. :wq<cr>
@@ -103,6 +108,13 @@ nnoremap <leader>o o<esc>k
 
 "ctrl-a로 전체 선택
 nnoremap <C-a> <esc>ggVG<CR>
+
+"닫는 중괄호 만들어주기
+inoremap {<CR> {<CR>}<esc>ko
+inoremap () ()<esc>i
+inoremap [] []<esc>i
+
+nnoremap ; A;<esc>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "CPP 빌드관련
