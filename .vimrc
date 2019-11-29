@@ -17,6 +17,8 @@ Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/Conque-GDB'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -103,16 +105,12 @@ nnoremap <leader>nt :<ESC>:NERDTreeToggle<CR>
 "종료
 nnoremap <leader>. :wq<cr>
 nnoremap <leader>q :q<cr>
+nnoremap <leader>w :w<cr>
 
 nnoremap <leader>o o<esc>k
 
 "ctrl-a로 전체 선택
 nnoremap <C-a> <esc>ggVG<CR>
-
-"닫는 중괄호 만들어주기
-inoremap {<CR> {<CR>}<esc>ko
-inoremap () ()<esc>i
-inoremap [] []<esc>i
 
 nnoremap ; A;<esc>
 
@@ -143,3 +141,15 @@ map <C-n> :NERDTreeToggle<CR>
 
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
+
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"YCM
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ycm_key_list_select_completion = ['<C-n>']
+let g:ycm_key_list_previous_completion=['<C-p>']
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>gr :YcmCompleter GoToReferences<Cr>
